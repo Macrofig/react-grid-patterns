@@ -8,16 +8,16 @@ const columns = [
     value: (row, column, i) => i + 1,
     visible: true
   },
-  {
-    label: 'Select',
-    key: '_selected',
-    value: () => {
-      return (<div><input type="checkbox" /></div>)
-    },
-    visibility: {
-      frozen: true
-    }
-  },
+  // {
+  //   label: 'Select',
+  //   key: '_selected',
+  //   value: () => {
+  //     return (<div><input type="checkbox" /></div>)
+  //   },
+  //   visibility: {
+  //     frozen: true
+  //   }
+  // },
   {
     label: 'City',
     key: 'city',
@@ -44,15 +44,15 @@ const columns = [
     },
     visible: true
   },
-  {
-    label: 'Actions',
-    value: () => {
-      return (<div><button type="button">Delete</button></div>)
-    },
-    visibility: {
-      frozen: true
-    }
-  }
+  // {
+  //   label: 'Actions',
+  //   value: () => {
+  //     return (<div><button type="button">Delete</button></div>)
+  //   },
+  //   visibility: {
+  //     frozen: true
+  //   }
+  // }
 ];
 
 

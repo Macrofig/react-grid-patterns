@@ -7,7 +7,7 @@ export const GridFilter = props => (
       ''
     }
   </div>
-)
+);
 
 export const Grid = props => (
   <table className='table table-striped table-hover table-bordered'>

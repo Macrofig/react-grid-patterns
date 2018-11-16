@@ -23,7 +23,7 @@ export class Page extends Component {
 
   filterChange(value, key) {
     this.setState({
-      data: data.filter(item => item[key].toLowerCase().trim().indexOf(value.toLowerCase().trim()) > -1)
+      data: this.props.data.filter(item => item[key].toLowerCase().trim().indexOf(value.toLowerCase().trim()) > -1)
     });
   }
 
