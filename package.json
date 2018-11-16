@@ -1,12 +1,12 @@
 {
-  "name": "react-grid",
-  "version": "1.0.0",
+  "name": "react-grid-patterns",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint src/. --config .eslintrc.json",
     "test": "jest",
-    "deploy-storybook": "storybook-to-ghpages",
+    "storybook:deploy": "storybook-to-ghpages",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [],
