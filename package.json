@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint",
     "test": "jest",
+    "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [],
@@ -23,5 +24,8 @@
     "react-dom": "^16.6.1",
     "rollup": "^0.67.0",
     "webpack": "^4.25.1"
+  },
+  "devDependencies": {
+    "@storybook/storybook-deployer": "^2.3.0"
   }
 }

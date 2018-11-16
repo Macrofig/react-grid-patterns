@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 /*
 
 COLUMN
@@ -30,3 +31,17 @@ frozen: boolean
 */
 
 export const Columns = () => {}
+
+
+export const ColumnList = props => (
+  <ul>
+    {props.columns.filter(column => {
+      return !(column.visibility && column.visibility.frozen)
+    }).map((column, i) => (
+      <li key={i}>
+        <input type='checkbox' checked={column.visible} onChange={(e) => {props.handleChange(column)}}/>
+        <label>{column.label}</label>
+      </li>
+    ))}
+  </ul>
+);
