@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
+import { GridFilter } from './filter';
+import { GridSort } from './sort';
 
-export const GridFilter = props => (
-  <div>
-    {props.config.filter ?
-      (<input type='text' value={props.value} onChange={e => {props.handleOnChange(e.target.value, props.config.key)}} />) :
-      ''
-    }
-  </div>
-);
+export const HeaderCell = props => {
+  const column = props.column;
+  const visible = typeof column.visible === 'undefined' || column.visible === true;
+  const hasSort = typeof column.sortable === 'undefined' || column.sortable === true;
+  const headTitle = <span>{column.label}</span>;
+  const sort = hasSort ? <GridSort direction={column.sortDirection} /> : null;
+  return ({ visible ? (
+      <div>
+        {headTitle}
+        {sort}
+      </div> :
+      null
+    )
+  })
+}
 
 export const Grid = props => (
   <table className='table table-striped table-hover table-bordered'>
     <thead>
       <tr>
         {props.columns.map((column, i) => {
-          return typeof column.visible === 'undefined' || column.visible === true ? (<td key={i}>{column.label}</td>) : null;
+          return typeof column.visible === 'undefined' || column.visible === true ? (
+            <td key={i}>
+              <span>{column.label}</span>
+
+            </td>
+          ) : null;
         })}
       </tr>
       <tr>

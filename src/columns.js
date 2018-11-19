@@ -30,7 +30,19 @@ frozen: boolean
 
 */
 
-export const Columns = () => {}
+export class ColumnList {
+  constructor(list) {
+    this._list = list;
+    this.list = this._list.map(item => new ColumnItem(item, this))
+  }
+}
+
+export class ColumnItem {
+  constructor(item, parent) {
+    this._item = item;
+    this._parent = parent;
+  }
+}
 
 
 export const ColumnList = props => (
